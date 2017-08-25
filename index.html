@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Школа Node.JS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="bootstrap.min.css" >
+        <script src="index.js"></script>
+        <style>
+            #resultContainer{
+                margin-top: 10px;
+                border-radius: 2px;
+                padding: 10px;
+            }
+            .success{
+                background: #78dc96;
+            }
+            .error{
+                background: #f98787;
+            }
+            input.error{
+                border:1px solid red;
+                background: transparent;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col col-sm-10 col-md-6">
+                    <form action="progress.json" id="myForm" onsubmit="return MyForm.submit()">
+                        <div class="form-group row">
+                            <label for="staticEmail" class="col-sm-2 col-form-label">
+                                ФИО
+                            </label>
+                            <div class="col-sm-10">
+                                <input name="fio" type="text"  class="form-control"  
+                                       placeholder="Введите ФИО через пробелы">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">
+                                Email
+                            </label>
+                            <div class="col-sm-10">
+                                <input name="email" type="text" class="form-control"
+                                       placeholder="Введите email">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">
+                                Телефон
+                            </label>
+                            <div class="col-sm-10">
+                                <input name="phone" type="text" class="form-control"
+                                       placeholder="Введите телефон: +7(999)999-99-99">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <button id="submitButton" type="submit" class="btn btn-outline-primary">
+                                    Отправить
+                                </button>
+                            </div>                            
+                        </div>
+                        <div class="row">
+                            <div id="resultContainer" class="col"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
